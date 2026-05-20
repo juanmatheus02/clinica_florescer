@@ -1,0 +1,179 @@
+/* =============================================
+   INDEX — estilos específicos
+   ============================================= */
+
+/* ── HERO ──────────────────────────────────── */
+.hero {
+  min-height: 92vh;
+  background: linear-gradient(160deg, var(--areia) 55%, var(--verde-claro) 100%);
+  display: flex;
+  align-items: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, var(--verde-claro) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: .5;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--rosa) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: .25;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-content { animation: fadeUp .8s ease both; }
+.hero-content .section-tag { margin-bottom: 1.2rem; }
+.hero-content h1 { margin-bottom: 1.2rem; }
+.hero-content p   { font-size: 1.12rem; margin-bottom: 2rem; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  animation: fadeUp .8s .2s ease both;
+}
+.hero-card-big {
+  background: #fff;
+  border-radius: var(--raio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.hero-card-big .emoji { font-size: 2.4rem; }
+.hero-cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.hero-mini {
+  background: #fff;
+  border-radius: var(--raio-sm);
+  padding: 1.3rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.hero-mini .num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: 'Lora', serif;
+  color: var(--verde-escuro);
+}
+.hero-mini span { font-size: .82rem; color: var(--texto-leve); }
+
+/* ── SERVIÇOS ──────────────────────────────── */
+.servicos { background: var(--areia); }
+.servico-card .card-icon { background: var(--areia-escura); }
+
+/* ── SOBRE HOME ────────────────────────────── */
+.sobre-home {
+  background: var(--branco);
+}
+.sobre-home-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.sobre-foto-wrap {
+  position: relative;
+}
+.sobre-foto {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde) 100%);
+  border-radius: 24px 24px 80px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+}
+.sobre-badge {
+  position: absolute;
+  bottom: -16px; right: -16px;
+  background: #fff;
+  border-radius: var(--raio-sm);
+  padding: 1rem 1.4rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+.sobre-badge strong { font-size: 1.4rem; color: var(--verde-escuro); }
+.sobre-badge span   { font-size: .78rem; color: var(--texto-leve); }
+
+/* ── DEPOIMENTOS ───────────────────────────── */
+.depoimentos { background: var(--areia); }
+.depoimento-card {
+  background: var(--branco);
+  border-radius: var(--raio);
+  padding: 1.8rem;
+  box-shadow: var(--sombra);
+}
+.depoimento-card blockquote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--texto);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+.depoimento-card blockquote::before { content: '"'; font-size: 2rem; color: var(--verde); line-height: 0; vertical-align: -.5rem; }
+.dep-autor {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+.dep-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.dep-autor strong { font-size: .9rem; display: block; }
+.dep-autor span   { font-size: .78rem; color: var(--texto-leve); }
+
+/* ── CTA BANNER ────────────────────────────── */
+.cta-banner {
+  background: linear-gradient(135deg, var(--verde) 0%, var(--verde-escuro) 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.cta-banner h2 { color: #fff; }
+.cta-banner p  { color: rgba(255,255,255,.85); margin: 1rem auto 2rem; font-size: 1.05rem; text-align: center; }
+
+/* Animações */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo hero */
+@media (max-width: 840px) {
+  .hero-inner, .sobre-home-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .sobre-foto { height: 280px; font-size: 5rem; }
+}
