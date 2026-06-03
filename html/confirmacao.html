@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmação de envio de agendamento na Clínica Florescer.">
+  <title>Agendamento enviado | Clínica Florescer</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="Clínica Florescer - Página Inicial">
+        <div class="logo-icon" aria-hidden="true">🌿</div>
+        <div class="logo-text">
+          <strong>Clínica Florescer</strong>
+          <span>Psicologia Infantil</span>
+        </div>
+      </a>
+      <nav aria-label="Menu principal">
+        <ul id="nav-menu">
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="atuacao.html">Atuação</a></li>
+          <li><a href="pesquisa.html">Pesquisas</a></li>
+          <li class="nav-cta"><a href="agendamento.html" class="btn btn-primary">Agendar Consulta</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="confirmacao-titulo">
+      <div class="container">
+        <span class="section-tag">Agendamento enviado</span>
+        <h1 id="confirmacao-titulo">Sua solicitação foi recebida</h1>
+        <p>Obrigado por entrar em contato. Nossa equipe irá analisar sua solicitação e retornará em até 24 horas úteis para confirmar o horário.</p>
+        <div class="hero-actions" style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="agendamento.html" class="btn btn-secondary">Voltar ao formulário</a>
+          <a href="../index.html" class="btn btn-primary">Ir para a página inicial</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon" aria-hidden="true">🌿</div>
+          <div class="logo-text">
+            <strong style="color:var(--verde-claro);">Clínica Florescer</strong>
+            <span style="color:rgba(255,255,255,.5);">Psicologia Infantil</span>
+          </div>
+        </div>
+        <p>Cuidado profissional e humanizado para crianças e famílias. Especialistas em ansiedade infantil em João Pessoa, PB.</p>
+      </div>
+      <div>
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="atuacao.html">Áreas de atuação</a></li>
+          <li><a href="pesquisa.html">Pesquisas</a></li>
+          <li><a href="agendamento.html">Agendamento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="atuacao.html">Terapia Lúdica</a></li>
+          <li><a href="atuacao.html">Ansiedade Infantil</a></li>
+          <li><a href="atuacao.html">Orientação Parental</a></li>
+          <li><a href="pesquisa.html">Avaliação Psicológica</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Clínica Florescer. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('aberto');
+    }
+  </script>
+</body>
+</html>

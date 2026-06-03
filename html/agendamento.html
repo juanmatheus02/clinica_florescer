@@ -104,7 +104,7 @@
             <div class="form-card">
               <h3 id="agend-form-titulo">Solicitar agendamento</h3>
 
-              <form id="form-agendamento" novalidate aria-label="Formulário de agendamento de consulta">
+              <form id="form-agendamento" action="confirmacao.html" novalidate aria-label="Formulário de agendamento de consulta">
 
                 <!-- Dados do responsável -->
                 <fieldset style="border:none;padding:0;margin-bottom:1.5rem;">
@@ -228,15 +228,6 @@
                 <p style="text-align:center;font-size:.78rem;margin-top:.8rem;">* Campos obrigatórios. Nossa equipe retorna em até 24h úteis.</p>
               </form>
 
-              <!-- Mensagem de sucesso -->
-              <div class="form-success" id="form-success" role="alert" aria-live="polite">
-                <div class="success-icon" aria-hidden="true">🌿</div>
-                <h3>Solicitação enviada!</h3>
-                <p style="text-align:center;margin:.7rem auto 0;">Nossa equipe entrará em contato em até 24 horas úteis para confirmar seu horário. Fique de olho no seu e-mail e WhatsApp!</p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -346,9 +337,7 @@
         this.reportValidity();
         return;
       }
-      this.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-      window.scrollTo({ top: document.querySelector('.form-card').offsetTop - 100, behavior: 'smooth' });
+      window.location.href = 'confirmacao.html';
     });
   </script>
 </body>
