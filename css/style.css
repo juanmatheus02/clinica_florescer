@@ -209,10 +209,15 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem;
+  justify-items: center;
+  text-align: center;
 }
-.footer-brand p { font-size: .88rem; margin-top: .8rem; line-height: 1.8; color: rgba(255,255,255,.7); max-width: 30ch; }
+.footer-brand p { font-size: .88rem; margin: .8rem auto 0; line-height: 1.8; color: rgba(255,255,255,.7); max-width: 30ch; }
+.footer-brand, .footer-inner > div {
+  width: 100%;
+}
 footer h4 { color: var(--verde-claro); font-family: 'Nunito', sans-serif; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; }
 footer ul li { margin-bottom: .5rem; }
 footer ul a { font-size: .9rem; color: rgba(255,255,255,.75); transition: color var(--transicao); }
@@ -223,7 +228,7 @@ footer ul a:hover { color: #fff; }
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,.15);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: .82rem;
   color: rgba(255,255,255,.5);
